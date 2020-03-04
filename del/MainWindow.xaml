@@ -1,0 +1,35 @@
+﻿<Window x:Class="del.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:del"
+        mc:Ignorable="d"
+        Title="DataBind in WPF" Height="463" Width="492">
+    <Grid HorizontalAlignment="Left" Width="512">
+        <Label Content="First Name" HorizontalAlignment="Left" Margin="104,32,0,0" VerticalAlignment="Top" Uid="fName_lbl "/>
+        <Label Content="Last Name" HorizontalAlignment="Left" Margin="104,63,0,0" VerticalAlignment="Top" Uid="lName_lbl "/>
+        <Label Content="Date of Birth" HorizontalAlignment="Left" Margin="104,94,0,0" VerticalAlignment="Top" Uid="DOB_lbl "/>
+        <Label Content="City" HorizontalAlignment="Left" Margin="104,125,0,0" VerticalAlignment="Top" Uid="City_lbl "/>
+
+        <Button Content="New" HorizontalAlignment="Left" Margin="108,184,0,0" VerticalAlignment="Top" Width="38" Uid="New_Btn "/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="163,184,0,0" VerticalAlignment="Top" Width="38" Uid="Add_Btn "/>
+        <Button Content="Delete" HorizontalAlignment="Left" Margin="227,184,0,0" VerticalAlignment="Top" Width="38" Uid="Del_Btn "/>
+        <Button Content="Update" HorizontalAlignment="Left" Margin="285,184,0,0" VerticalAlignment="Top" Width="51" Uid="Update_Btn "/>
+
+        <TextBox HorizontalAlignment="Left" Margin="198,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Uid="fName_Txt "/>
+        <TextBox HorizontalAlignment="Left" Margin="198,63,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Uid="lName_Txt "/>
+
+
+        <DatePicker HorizontalAlignment="Left" Margin="198,96,0,0" VerticalAlignment="Top" Width="120" Uid="DOB_Txt "/>
+        <ComboBox HorizontalAlignment="Left" Margin="198,127,0,0" VerticalAlignment="Top" Width="120" Uid="City_Txt "/>
+
+        <DataGrid Margin="0,217,0,26" HorizontalAlignment="Left" Width="481" Height="199" Uid="Datagrid1"
+
+                  CanUserResizeRows="False" 
+                  ItemsSource="{Binding Path=MyDataBinding}" VerticalAlignment="Top"
+                  Grid.Row="4" AutoGenerateColumns="False"
+                  />
+
+    </Grid>
+</Window>
